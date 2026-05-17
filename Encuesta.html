@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta de Salida - ESPE</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg,#ffd6e7,#ffeaf3);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .encabezado {
+            background: linear-gradient(90deg,#ff4f9a,#ff85b3);
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+            .encabezado h1 {
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+
+            .encabezado p {
+                font-size: 18px;
+            }
+
+        form {
+            padding: 40px;
+        }
+
+        .seccion {
+            margin-bottom: 35px;
+            background: #fff4f8;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 8px solid #ff4f9a;
+        }
+
+            .seccion h2 {
+                color: #d81b73;
+                margin-bottom: 20px;
+                font-size: 28px;
+            }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ffc2d9;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+            input:focus,
+            textarea:focus,
+            select:focus {
+                border-color: #ff4f9a;
+                box-shadow: 0 0 8px rgba(255,79,154,0.4);
+            }
+
+        textarea {
+            resize: none;
+        }
+
+        .opciones {
+            margin-top: 10px;
+        }
+
+            .opciones label {
+                display: block;
+                font-weight: normal;
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #ff4f9a;
+            transform: scale(1.2);
+        }
+
+        .botones {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            background: linear-gradient(90deg,#ff4f9a,#ff85b3);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+            button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 15px rgba(255,79,154,0.4);
+            }
+
+        .footer {
+            background: #ffebf3;
+            text-align: center;
+            padding: 20px;
+            color: #a10053;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @media(max-width:768px) {
+            .encabezado h1 {
+                font-size: 28px;
+            }
+
+            form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="encabezado">
+            <h1>CASO 2: ENCUESTA DE SALIDA</h1>
+            <p>
+                Universidad de las Fuerzas Armadas ESPE <br>
+                Materia: Fundamentos de Sistemas Web
+            </p>
+        </div>
+
+        <form>
+
+            <!-- DATOS PERSONALES -->
+            <div class="seccion">
+                <h2>Datos Personales</h2>
+
+                <label>Nombre Completo</label>
+                <input type="text" placeholder="Ingrese su nombre">
+
+                <label>Correo Electrónico</label>
+                <input type="email" placeholder="ejemplo@espe.edu.ec">
+
+                <label>Carrera</label>
+                <select>
+                    <option>Seleccione una opción</option>
+                    <option>Ingeniería en Software</option>
+                    <option>Tecnologías de la Información</option>
+                    <option>Electrónica</option>
+                    <option>Mecatrónica</option>
+                    <option>Otra</option>
+                </select>
+            </div>
+
+            <!-- INTERESES -->
+            <div class="seccion">
+                <h2>Temas de Interés</h2>
+
+                <div class="opciones">
+                    <label><input type="checkbox"> Tecnología</label>
+                    <label><input type="checkbox"> Deportes</label>
+                    <label><input type="checkbox"> Ciencia</label>
+                    <label><input type="checkbox"> Música</label>
+                    <label><input type="checkbox"> Videojuegos</label>
+                    <label><input type="checkbox"> Programación</label>
+                    <label><input type="checkbox"> Inteligencia Artificial</label>
+                    <label><input type="checkbox"> Educación</label>
+                    <label><input type="checkbox"> Noticias Internacionales</label>
+                    <label><input type="checkbox"> Redes Sociales</label>
+                </div>
+            </div>
+
+            <!-- FRECUENCIA -->
+            <div class="seccion">
+                <h2>Frecuencia de Uso</h2>
+
+                <div class="opciones">
+                    <label><input type="radio" name="frecuencia"> Diario</label>
+                    <label><input type="radio" name="frecuencia"> Semanal</label>
+                    <label><input type="radio" name="frecuencia"> Mensual</label>
+                </div>
+            </div>
+
+            <!-- BOTONES -->
+            <div class="botones">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </div>
+
+        </form>
+
+        <div class="footer">
+            Proyecto Académico - Fundamentos de Sistemas Web <br>
+            Universidad de las Fuerzas Armadas ESPE
+        </div>
+
+    </div>
+
+</body>
+</html>
